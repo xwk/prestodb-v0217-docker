@@ -1,0 +1,12 @@
+{% if is_coordinator == 'true' %}
+coordinator=true
+node-scheduler.include-coordinator=false
+discovery-server.enabled=true
+{% else %}
+coordinator=false
+{% endif %}
+http-server.http.port=8080
+query.max-memory=50GB
+query.max-memory-per-node=4GB
+query.max-total-memory-per-node=8GB
+discovery.uri={{ discovery_uri }}

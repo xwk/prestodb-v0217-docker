@@ -1,10 +1,15 @@
 #!/usr/bin/env python
 import argparse
+import glob
+import os
 
 from jinja2 import Environment, FileSystemLoader
 
 
 def render(vars):
+    print('Hi--------------', os.getcwd())
+    print(glob.glob('./etc/*'))
+
     env = Environment(loader=FileSystemLoader('.', encoding='utf8'))
     files = [
         'etc/node.properties.template',

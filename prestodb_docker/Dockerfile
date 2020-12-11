@@ -31,7 +31,7 @@ COPY --chown=presto:presto scripts ${PRESTO_HOME}/scripts
 
 EXPOSE 8080
 
-VOLUME ["${PRESTO_HOME}/etc", "${PRESTO_HOME}/data"]
+VOLUME ["${PRESTO_HOME}/data"]
 
 WORKDIR ${PRESTO_HOME}
 USER presto

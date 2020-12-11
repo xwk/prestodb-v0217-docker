@@ -7,7 +7,7 @@ The cluster contains
  * hdfs
  * postgres backed hive metastore
  * prestodb 0.217
-   * one coordinator (also as a worker)
+   * one coordinator 
    * two workers
 
 # Credits
