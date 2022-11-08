@@ -18,6 +18,23 @@ The cluster contains
 ```shell script
 docker-compose up
 ```
+  The presto cluster listens on port 8080
+
+# Run query
+ * use presto cli
+
+  Follow instructions at https://prestodb.io/docs/current/installation/cli.html to get presto cli, then run 
+  `presto`, where you can issue queries.
+
+ * use presto python client
+
+  Follow instructions at https://github.com/prestodb/presto-python-client
+  Notice, the connection params is as below
+`conn=prestodb.dbapi.connect(host='localhost', user='the-user')`
+  The user parameter must be set, but the value does not matter
+ 
+ 
+
 # Copy files to HDFS
 ```docker-compose exec namenode /bin/bash```
 It will drop you in the shell of the namenode container.
@@ -62,7 +79,3 @@ ALTER TABLE ADD PARTITION to manually add each partition.
     tag 0.215 of https://github.com/shawnzhu/docker-prestodb 
  * The per node configuration file rendering design is based on 
     https://github.com/Lewuathe/docker-presto-cluster/scripts
-
-
-
-
